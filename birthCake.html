@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>生快~</title>
+    <script>
+        function switchAppearance(e) {
+            console.log("event handler triggered");
+            var button = document.getElementById("appearanceSwitch")
+            var section = document.getElementById("art")
+            if (button.value == "暗") {
+                section.style.background = "#FFFFFF"
+                section.style.color = "#000000"
+                button.textContent = "关灯"
+                button.style.backgroundColor = "#eeeeee"
+                button.style.border = "ridge"
+                button.value = "亮"
+            } else {
+                section.style.background = "#2A4767"
+                section.style.color = "#FFFFFF"
+                button.textContent = "开灯"
+                button.style.backgroundColor = "#2A4767"
+                button.value = "暗"
+            }
+            return
+        }
+    </script>
+    <script>
+        const RNUM = ["传送中","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII",
+                    "XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII","XXIII"]   
+        const COLOR = ["#d0eaf8","#d4e7f1","#d7e4eb","#d9e1e5","#dcdee0","#dedcdb","#dfdad7",
+                    "#e1d7d2","#e3d5cc","#e5d2c6","#e7cebf","#e7cebf","#ecc7af","#eec3a7",
+                    "#f0be9d","#f1b993","#f3b387","#f4ad7c","#f5a770","#f6a163","#f79a56","#f79347"]   
+        var candlesState = new Array(23).fill(0)
+
+        function lightDecoration(event) {
+            console.log("lightCandle triggered")
+
+            const sum = candlesState.reduce((ps,a) => ps + a, 0)
+            var remain = document.getElementById("remain")
+            remain.value = RNUM[23-sum]
+            remain.style.backgroundColor = COLOR[sum]
+    
+            event.target.style.color = "#f79347"
+
+            if (sum == 23) {
+                console.log("routing...")
+                window.location.href = "balloon.html"
+            }
+        }
+    </script>
+    <script>
+        function warning(e) {
+            alert("别碰老子!!")
+        }
+    </script>
+    <script>
+        window.onload = (event) => { alert( "获得 打火机*1\n 🔥🚬"); };
+    </script>
+</head>
+<body>
+<div id="art">
+<button id="appearanceSwitch" type="button" onclick="switchAppearance()" value="亮">关灯</button>
+
+<pre>
+            <span style="color: #95c3d0;" onclick="candlesState[0] = 1; lightDecoration(event);">*</span>                 <span style="color: #95c3d0;" onclick="candlesState[1] = 1; lightDecoration(event);">*</span>                           <span style="color: #95c3d0;" onclick="candlesState[2] = 1; lightDecoration(event);">*</span>
+                                         <span style="color: #95c3d0;" onclick="candlesState[3] = 1; lightDecoration(event);">*</span>
+    <span style="color: #95c3d0;" onclick="candlesState[4] = 1; lightDecoration(event);">*</span>
+                            <span style="color: #95c3d0;" onclick="candlesState[5] = 1; lightDecoration(event);">*</span>
+                    <span style="color: #95c3d0;" onclick="candlesState[6] = 1; lightDecoration(event);">*</span>                                 <span style="color: #95c3d0;" onclick="candlesState[7] = 1; lightDecoration(event);">*</span>
+   <span style="color: #95c3d0;" onclick="candlesState[8] = 1; lightDecoration(event);">*</span>
+                                            <span style="color: #95c3d0;" onclick="candlesState[9] = 1; lightDecoration(event);">*</span>
+       <span style="color: #95c3d0;" onclick="candlesState[10] = 1; lightDecoration(event);">*</span>
+                     <span style="color: #95c3d0;" onclick="candlesState[11] = 1; lightDecoration(event);">*</span>             <span style="color: #95c3d0;" onclick="candlesState[12] = 1; lightDecoration(event);">*</span>
+                                               <span style="color: #95c3d0;" onclick="candlesState[13] = 1; lightDecoration(event);">*</span>
+<span style="color: #95c3d0;" onclick="candlesState[14] = 1; lightDecoration(event);">*</span>                                                               <span style="color: #95c3d0;" onclick="candlesState[15] = 1; lightDecoration(event);">*</span>
+         <span style="color: #95c3d0;" onclick="candlesState[16] = 1; lightDecoration(event);">*</span>
+                         (             )
+                 )      <span style="color: #95c3d0;" onclick="candlesState[19] = 1; lightDecoration(event);">(*)</span>           <span style="color: #95c3d0;" onclick="candlesState[20] = 1; lightDecoration(event);">(*)</span>      (
+        <span style="color: #95c3d0;" onclick="candlesState[17] = 1; lightDecoration(event);">*</span>       <span style="color: #95c3d0;" onclick="candlesState[21] = 1; lightDecoration(event);">(*)</span>      |             |      <span style="color: #95c3d0;" onclick="candlesState[22] = 1; lightDecoration(event);">(*)</span> 
+                 |      |~|           |~|      |          <span style="color: #95c3d0;" onclick="candlesState[18] = 1; lightDecoration(event);">*</span>
+                |~|     | |           | |     |~|
+                | |     | |           | |     | |
+               ,| |a@@@@| |@@@@@@@@@@@| |@@@@a| |.
+          .,a@@@| |@@@@@| |@@@@@@@@@@@| |@@@@@| |@@@@a,.
+        ,a@@@@@@| |@@@@@@@@@@@@.@@@@@@@@@@@@@@| |@@@@@@@a,
+       a@@@@@@@@@@@@@@@@@@@@@&#039; . `@@@@@@@@@@@@@@@@@@@@@@@@a
+       ;`@@@@@@@@@@@@@@@@@@&#039;   .   `@@@@@@@@@@@@@@@@@@@@@&#039;;
+       ;@@@`@@@@@@@@@@@@@&#039;     .     `@@@@@@@@@@@@@@@@&#039;@@@;
+       ;@@@;,.aaaaaaaaaa       .       aaaaa,,aaaaaaa,;@@@;
+       ;;@;;;;@@@@@@@@;@      @.@      ;@@@;;;@@@@@@;;;;@@;
+       ;;;;;;;@@@@;@@;;@    @@ . @@    ;;@;;;;@@;@@@;;;;;;;
+       ;;;;;;;;@@;;;;;;;  @@   .   @@  ;;;;;;;;;;;@@;;;;@;;
+       ;;;;;;;;;;;;;;;;;@@  <input id="remain" type="button" value="XXIII" onclick="warning()" style="height: 50px; width: 50px; background-color: #d0eaf8;">  @@;;;;;;;;;;;;;;;;@@@;;
+   ,%%%;;;;;;;;@;;;;;;;;       .       ;;;;;;;;;;;;;;;;@@;;%%%,
+.%%%%%%;;;;;;;@@;;;;;;;;     ,%%%,     ;;;;;;;;;;;;;;;;;;;;%%%%%%,
+.%%%%%%%;;;;;;;@@;;;;;;;;   ,%%%%%%%,   ;;;;;;;;;;;;;;;;;;;;%%%%%%%,
+%%%%%%%%`;;;;;;;;;;;;;;;;  %%%%%%%%%%%  ;;;;;;;;;;;;;;;;;;;&#039;%%%%%%%%
+%%%%%%%%%%%%`;;;;;;;;;;;;,%%%%%%%%%%%%%,;;;;;;;;;;;;;;;&#039;%%%%%%%%%%%%
+`%%%%%%%%%%%%%%%%%,,,,,,,%%%%%%%%%%%%%%%,,,,,,,%%%%%%%%%%%%%%%%%%%%&#039;
+ `%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&#039;
+     `%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&#039;
+            &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;`,,,,,,,,,&#039;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+                           `%%%%%%%&#039;
+                            `%%%%%&#039;
+                              %%%     
+                             %%%%%
+                          .,%%%%%%%,.
+                     ,%%%%%%%%%%%%%%%%%%%,
+</pre>
+</div>
+
+
+
+</body>

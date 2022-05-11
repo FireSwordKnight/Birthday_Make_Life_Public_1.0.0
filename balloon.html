@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>生快~</title>
+    <script>
+        function switchAppearance(e) {
+            console.log("event handler triggered");
+            var button = document.getElementById("appearanceSwitch")
+            var section = document.getElementById("art")
+            if (button.value == "暗") {
+                section.style.background = "#FFFFFF"
+                section.style.color = "#000000"
+                button.textContent = "关灯"
+                button.style.backgroundColor = "#eeeeee"
+                button.style.border = "ridge"
+                button.value = "亮"
+            } else {
+                section.style.background = "#2A4767"
+                section.style.color = "#FFFFFF"
+                button.textContent = "开灯"
+                button.style.backgroundColor = "#2A4767"
+                button.value = "暗"
+            }
+            return
+        }
+    </script>
+</head>
+<body>
+<div id="art">
+<button id="appearanceSwitch" type="button" onclick="switchAppearance()" value="亮">关灯</button>
+<pre>
+    _  _
+    |_|  /| |_)|_)\_/
+    | | /-| |  |   /
+_     _ ___     _
+|_) | |_) |  |_|| \  /| \_/
+|_) | | \ |  | ||_/ /-|  /
+
+                .--------.
+              .: : :  :___`.
+            .'!!:::::  \\_\ `.
+       : . /%O!!::::::::\\_\. \
+      [""]/%%O!!:::::::::  : . \
+      |  |%%OO!!::::::::::: : . |
+      |  |%%OO!!:::::::::::::  :|
+      |  |%%OO!!!::::::::::::: :|
+:       .'--`.%%OO!!!:::::::::::: :|
+: .:     /`.__.'\%%OO!!!::::::::::::/
+:    .   /        \%OO!!!!::::::::::/
+,-'``'-. ;          ;%%OO!!!!!!:::::'
+|`-..-'| |   ,--.   |`%%%OO!!!!!!:'
+| .   :| |_.','`.`._|  `%%%OO!%%'
+| . :  | |--'    `--|    `%%%%'
+|`-..-'| ||   | | | |     /__\`-.
+\::::::/ ||)|/|)|)|\|           /
+---------`::::'--|._ ~**~ _.|----------( -----------------------
+)(    |  `-..-'  |           \    ______
+)(    |          |,--.       ____/ /  /\\ ,-._.-'
+,-')('-. |          |\`;/   .-()___  :  |`.!,-'`'/`-._
+(  '  `  )`-._    _.-'|;,|    `-,    \_\__\`,-'>-.,-._
+`-....-'     ````    `--'      `-._       (`- `-._`-.   
+
+</pre>
+</div>
+</body>
