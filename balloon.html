@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<html style="height: 100%;">
 <head>
     <meta charset="UTF-8">
-    <title>生快~</title>
+    <title>生日整活1.0.0</title>
     <script>
         function switchAppearance(e) {
             console.log("event handler triggered");
@@ -10,13 +11,16 @@
             if (button.value == "暗") {
                 section.style.background = "#FFFFFF"
                 section.style.color = "#000000"
+                section.style.fontWeight = "normal"
                 button.textContent = "关灯"
                 button.style.backgroundColor = "#eeeeee"
                 button.style.border = "ridge"
                 button.value = "亮"
             } else {
                 section.style.background = "#2A4767"
-                section.style.color = "#FFFFFF"
+                section.style.color = "#FF1493"
+                section.style.backgroundImage = "url('starlit_night.jpeg')"
+                section.style.fontWeight = "900"
                 button.textContent = "开灯"
                 button.style.backgroundColor = "#2A4767"
                 button.value = "暗"
@@ -24,10 +28,21 @@
             return
         }
     </script>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .container pre {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
 </head>
-<body>
-<div id="art">
+<body style="height: 100%;">
+<div id="art" style="height: 100%;">
 <button id="appearanceSwitch" type="button" onclick="switchAppearance()" value="亮">关灯</button>
+<div class="container">
 <pre>
     _  _
     |_|  /| |_)|_)\_/
@@ -62,4 +77,6 @@ _     _ ___     _
 
 </pre>
 </div>
+</div>
 </body>
+</html>

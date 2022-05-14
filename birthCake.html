@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<html style="height: 100%;">
 <head>
     <meta charset="UTF-8">
-    <title>生快~</title>
+    <title>生日整活1.0.0</title>
     <script>
+        // light
         function switchAppearance(e) {
             console.log("event handler triggered");
             var button = document.getElementById("appearanceSwitch")
@@ -10,13 +12,16 @@
             if (button.value == "暗") {
                 section.style.background = "#FFFFFF"
                 section.style.color = "#000000"
+                section.style.fontWeight = "normal"
                 button.textContent = "关灯"
                 button.style.backgroundColor = "#eeeeee"
                 button.style.border = "ridge"
                 button.value = "亮"
             } else {
                 section.style.background = "#2A4767"
+                section.style.backgroundImage = "url('starlit_night.jpeg')"
                 section.style.color = "#FFFFFF"
+                section.style.fontWeight = "900"
                 button.textContent = "开灯"
                 button.style.backgroundColor = "#2A4767"
                 button.value = "暗"
@@ -25,6 +30,7 @@
         }
     </script>
     <script>
+        // candles
         const RNUM = ["传送中","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII",
                     "XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII","XXIII"]   
         const COLOR = ["#d0eaf8","#d4e7f1","#d7e4eb","#d9e1e5","#dcdee0","#dedcdb","#dfdad7",
@@ -49,18 +55,30 @@
         }
     </script>
     <script>
+        // cake center
         function warning(e) {
-            alert("别碰老子!!")
+            alert("嘣！💥💥💥💥💥💥💥💥💥💥💥💥💥💥")
+            window.location.href = "https://wwwwwwwww.jodi.org/100cc/hqx/i900.html"
         }
     </script>
     <script>
         window.onload = (event) => { alert( "获得 打火机*1\n 🔥🚬"); };
     </script>
-</head>
-<body>
-<div id="art">
-<button id="appearanceSwitch" type="button" onclick="switchAppearance()" value="亮">关灯</button>
+    <style>
+        .container {
+            text-align: center;
+        }
 
+        .container pre {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body style="height: 100%;">
+<div id="art" style="height: 100%;">
+<button id="appearanceSwitch" type="button" onclick="switchAppearance()" value="亮">关灯</button>
+<div class="container">
 <pre>
             <span style="color: #95c3d0;" onclick="candlesState[0] = 1; lightDecoration(event);">*</span>                 <span style="color: #95c3d0;" onclick="candlesState[1] = 1; lightDecoration(event);">*</span>                           <span style="color: #95c3d0;" onclick="candlesState[2] = 1; lightDecoration(event);">*</span>
                                          <span style="color: #95c3d0;" onclick="candlesState[3] = 1; lightDecoration(event);">*</span>
@@ -90,7 +108,7 @@
        ;;@;;;;@@@@@@@@;@      @.@      ;@@@;;;@@@@@@;;;;@@;
        ;;;;;;;@@@@;@@;;@    @@ . @@    ;;@;;;;@@;@@@;;;;;;;
        ;;;;;;;;@@;;;;;;;  @@   .   @@  ;;;;;;;;;;;@@;;;;@;;
-       ;;;;;;;;;;;;;;;;;@@  <input id="remain" type="button" value="XXIII" onclick="warning()" style="height: 50px; width: 50px; background-color: #d0eaf8;">  @@;;;;;;;;;;;;;;;;@@@;;
+       ;;;;;;;;;;;;;;;;;@@  <input id="remain" type="button" value="XXIII" onclick="warning()" style="height: 50px; width: 50px; background-color: #d0eaf8;">   @@;;;;;;;;;;;;;;;;@@@;;
    ,%%%;;;;;;;;@;;;;;;;;       .       ;;;;;;;;;;;;;;;;@@;;%%%,
 .%%%%%%;;;;;;;@@;;;;;;;;     ,%%%,     ;;;;;;;;;;;;;;;;;;;;%%%%%%,
 .%%%%%%%;;;;;;;@@;;;;;;;;   ,%%%%%%%,   ;;;;;;;;;;;;;;;;;;;;%%%%%%%,
@@ -108,7 +126,7 @@
                      ,%%%%%%%%%%%%%%%%%%%,
 </pre>
 </div>
-
-
-
+</div>
+</div>
 </body>
+</html>
