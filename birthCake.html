@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html style="height: 100%;">
 <head>
+    <link href="https://allfont.net/allfont.css?fonts=flame" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8">
     <title>生日整活1.0.0</title>
     <script>
@@ -31,8 +32,8 @@
     </script>
     <script>
         // candles
-        const RNUM = ["传送中","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII",
-                    "XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII","XXIII"]   
+        const RNUM = ["O","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII",
+                    "XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII",""]   
         const COLOR = ["#d0eaf8","#d4e7f1","#d7e4eb","#d9e1e5","#dcdee0","#dedcdb","#dfdad7",
                     "#e1d7d2","#e3d5cc","#e5d2c6","#e7cebf","#e7cebf","#ecc7af","#eec3a7",
                     "#f0be9d","#f1b993","#f3b387","#f4ad7c","#f5a770","#f6a163","#f79a56","#f79347"]   
@@ -43,28 +44,39 @@
 
             const sum = candlesState.reduce((ps,a) => ps + a, 0)
             var remain = document.getElementById("remain")
-            remain.value = RNUM[23-sum]
+            remain.value = RNUM[sum]
             remain.style.backgroundColor = COLOR[sum]
     
             event.target.style.color = "#f79347"
 
             if (sum == 23) {
-                console.log("routing...")
-                window.location.href = "balloon.html"
+                remain.style.backgroundImage = "url('burning_heart.jpeg')"
             }
         }
     </script>
     <script>
         // cake center
-        function warning(e) {
-            alert("嘣！💥💥💥💥💥💥💥💥💥💥💥💥💥💥")
-            window.location.href = "https://wwwwwwwww.jodi.org/100cc/hqx/i900.html"
+        function onClickCenter(e) {
+            const sum = candlesState.reduce((ps,a) => ps + a, 0)
+            if (sum != 23) {
+                alert("嘣！💥💥💥💥💥💥💥💥💥💥💥💥💥💥")
+                window.location.href = "https://wwwwwwwww.jodi.org/100cc/hqx/i900.html"
+            } else {
+                window.location.href = "balloon.html"
+            }
         }
+
     </script>
     <script>
         window.onload = (event) => { alert( "获得 打火机*1\n 🔥🚬"); };
     </script>
     <style>
+        #art {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
         .container {
             text-align: center;
         }
@@ -72,6 +84,16 @@
         .container pre {
             display: inline-block;
             text-align: left;
+        }
+
+        #remain {
+            /* background-image: url('burning_heart.jpeg'); */
+            font-family: 'Flame', Arial;
+            font-size: medium;
+            background-repeat: no-repeat;
+            background-size: 180% 100%;
+            background-position: 40% 50%;
+            border: none;
         }
     </style>
 </head>
@@ -108,7 +130,7 @@
        ;;@;;;;@@@@@@@@;@      @.@      ;@@@;;;@@@@@@;;;;@@;
        ;;;;;;;@@@@;@@;;@    @@ . @@    ;;@;;;;@@;@@@;;;;;;;
        ;;;;;;;;@@;;;;;;;  @@   .   @@  ;;;;;;;;;;;@@;;;;@;;
-       ;;;;;;;;;;;;;;;;;@@  <input id="remain" type="button" value="XXIII" onclick="warning()" style="height: 50px; width: 50px; background-color: #d0eaf8;">   @@;;;;;;;;;;;;;;;;@@@;;
+       ;;;;;;;;;;;;;;;;;@@  <input id="remain" type="button" value="O" onclick="onClickCenter()" style="height: 50px; width: 50px; background-color: #d0eaf8;">   @@;;;;;;;;;;;;;;;;@@@;;
    ,%%%;;;;;;;;@;;;;;;;;       .       ;;;;;;;;;;;;;;;;@@;;%%%,
 .%%%%%%;;;;;;;@@;;;;;;;;     ,%%%,     ;;;;;;;;;;;;;;;;;;;;%%%%%%,
 .%%%%%%%;;;;;;;@@;;;;;;;;   ,%%%%%%%,   ;;;;;;;;;;;;;;;;;;;;%%%%%%%,
