@@ -70,7 +70,15 @@
         window.onload = (event) => { alert( "获得 打火机*1\n 🔥🚬"); };
     </script>
     <style>
-        @import url(https://allfont.net/allfont.css?fonts=flame);
+        @font-face {
+            font-family: 'Flame';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Flame'), local('Flame-Regular'),
+            url(http://allfont.ru/cache/fonts/flame_533582c95cd26da53411c094bac85332.woff) format('woff'),
+            url(http://allfont.ru/cache/fonts/flame_533582c95cd26da53411c094bac85332.ttf) format('truetype');
+        }
+        
         #art {
             cursor: url("lighter_icon.png") 15 0, auto;
             background-repeat: no-repeat;
