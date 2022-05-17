@@ -2,7 +2,7 @@
 <html style="height: 100%;">
 <head>
     <meta charset="UTF-8">
-    <title>生日整活1.0.0</title>
+    <title>🍰</title>
     <script>
         // light
         function switchAppearance(e) {
@@ -32,7 +32,7 @@
     <script>
         // candles
         const RNUM = ["O","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII",
-                    "XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII",""]   
+                    "XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII","XXIII"]   
         const COLOR = ["#d0eaf8","#d4e7f1","#d7e4eb","#d9e1e5","#dcdee0","#dedcdb","#dfdad7",
                     "#e1d7d2","#e3d5cc","#e5d2c6","#e7cebf","#e7cebf","#ecc7af","#eec3a7",
                     "#f0be9d","#f1b993","#f3b387","#f4ad7c","#f5a770","#f6a163","#f79a56","#f79347"]   
@@ -48,8 +48,9 @@
     
             event.target.style.color = "#f79347"
 
-            if (sum == 23) {
-                remain.style.backgroundImage = "url('burning_heart.jpeg')"
+            if (sum == 23) { 
+                alert( "获得 法杖*1\n 🪄✨" )
+                document.getElementsByTagName("input")[0].style.cursor = 'url("icon-stick-40.png") 20 20, auto'
             }
         }
     </script>
@@ -110,7 +111,7 @@
         }
 
         input {
-            cursor: url("icon-stick-40.png") 20 20, auto;
+            cursor: url("lighter_icon.png") 15 0, auto;
             border-radius: 50%;
         }
 

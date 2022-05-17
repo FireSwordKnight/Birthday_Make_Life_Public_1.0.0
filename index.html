@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>差不多了，在debug</title>
+    <title>传送点击计时器</title>
  
     <script>
         (function(e,i,h,f,c,b,d){
@@ -21,6 +21,8 @@
             let birth_date = new Date('2022-05-20T00:00:00')
             if (cur_date > birth_date) {
                 window.location.href="birthCake.html"
+            } else {
+                alert("(•_•): 时间没到~")
             }
             return false
         }
